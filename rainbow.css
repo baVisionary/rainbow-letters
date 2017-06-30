@@ -1,0 +1,55 @@
+form {
+  margin-bottom: 3em;
+}
+
+#rainbow {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 10em;
+  text-shadow: 
+    /*-1px 1px darkgray, 
+    1px 1px darkgray, 
+    1px -1px darkgray,
+    -1px -1px darkgray,*/
+    2px 2px 2px darkgray, 
+    4px 4px 2px darkgray,
+    6px 6px 2px darkgray, 
+    8px 8px 2px darkgray, 
+    10px 10px 2px darkgray,
+    12px 12px 2px darkgray,
+    14px 14px 2px darkgray;
+    line-height: 1em;
+    letter-spacing: 0.08em;
+}
+
+#rainbow div {
+  display: inline-block;
+  width: 0.5em;
+}
+
+#rainbow span:nth-of-type(7n+1) {
+  color: crimson;
+}
+
+#rainbow span:nth-of-type(7n+2) {
+  color: orange;
+}
+
+#rainbow span:nth-of-type(7n+3) {
+  color: yellow;
+}
+
+#rainbow span:nth-of-type(7n+4) {
+  color: forestgreen;
+}
+
+#rainbow span:nth-of-type(7n+5) {
+  color: dodgerblue;
+}
+
+#rainbow span:nth-of-type(7n+6) {
+  color: darkorchid;
+}
+
+#rainbow span:nth-of-type(7n) {
+  color: orchid;
+}

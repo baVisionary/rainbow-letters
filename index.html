@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="rainbow.css">
+</head>
+
+<body>
+  <form id="decorate-me">
+    <label for="raw-text">Enter text: <input type="text" id="raw-text"></label>
+    <input type="submit" value="Decorate">
+  </form>
+
+  <div id="rainbow"></div>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script>
+    $('#decorate-me').on('submit', (e) => {
+      e.preventDefault();
+      var words = $('#raw-text').val().toUpperCase().split('');
+      $('#raw-text').val('');
+      $('#rainbow').children().remove();
+      console.log(words);
+      words.forEach((char) => {
+        if (char != " ") {
+          $('#rainbow').append(`<span>${char}</span>`);
+        } else {
+          $('#rainbow').append(`<div>&nbsp;</div>`);
+        }
+      }, this);
+    })
+  </script>
+</body>
+
+</html>
